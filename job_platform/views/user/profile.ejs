@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>Create Profile</h2>
+    <form action="/user/profile" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="fullName" required><br>
+        
+        <label>Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="e.g., JavaScript, Python"><br>
+
+        <label>Preferred Job Type:</label>
+        <select name="jobType">
+            <option value="full-time">Full-Time</option>
+            <option value="internship">Internship</option>
+        </select><br>
+        
+        <button type="submit">Save Profile</button>
+    </form>
+</body>
+</html>

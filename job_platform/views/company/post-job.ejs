@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post Job</title>
+</head>
+<body>
+    <h2>Post a Job</h2>
+    <form action="/company/post-job" method="post">
+        <label>Job Title:</label>
+        <input type="text" name="jobTitle" required><br>
+
+        <label>Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label>Job Type:</label>
+        <select name="jobType">
+            <option value="full-time">Full-Time</option>
+            <option value="internship">Internship</option>
+        </select><br>
+
+        <label>Required Skills:</label>
+        <input type="text" name="skills" placeholder="e.g., JavaScript, Python"><br>
+
+        <button type="submit">Post Job</button>
+    </form>
+</body>
+</html>
