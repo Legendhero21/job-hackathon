@@ -9,58 +9,36 @@
 <body>
     <div class="container">
         <header class="mt-5 text-center">
-            <h1>Job Seeker Dashboard</h1>
-            <p>Welcome! Here you can create your profile and apply for job opportunities.</p>
+            <h1>Job Listings</h1>
+            <p>Find job opportunities from various companies and filter based on your preferences.</p>
         </header>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4">
-            <a class="navbar-brand" href="#">Job Platform</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/job-seeker">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/company">Company</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="mt-4">
-            <h3>Your Profile</h3>
-            <!-- Job Seeker Profile Form -->
-            <form>
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" placeholder="Enter your location">
-                </div>
-                <div class="form-group">
-                    <label for="skills">Skills</label>
-                    <input type="text" class="form-control" id="skills" placeholder="Enter your skills">
-                </div>
-                <div class="form-group">
-                    <label for="jobType">Job Type</label>
-                    <select class="form-control" id="jobType">
-                        <option>Full-Time</option>
-                        <option>Internship</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Update Profile</button>
+        <!-- Filter Form -->
+        <div class="filter-section mb-4">
+            <form action="/job-seeker" method="GET" class="form-inline">
+                <input type="text" name="location" class="form-control mr-2" placeholder="Location">
+                <input type="text" name="skills" class="form-control mr-2" placeholder="Skills">
+                <input type="text" name="experience" class="form-control mr-2" placeholder="Experience">
+                <input type="text" name="industry" class="form-control mr-2" placeholder="Industry">
+                <select name="jobType" class="form-control mr-2">
+                    <option value="">Job Type</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Internship">Internship</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Filter</button>
             </form>
+        </div>
+
+        <!-- Job Listings Section -->
+        
+
+        <!-- Update Profile Button -->
+        <div class="mt-4 text-center">
+            <a href="/job-seeker/update" class="btn btn-secondary">Update Profile</a>
         </div>
     </div>
 
-    <!-- Include Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
